@@ -1,0 +1,93 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"FGPushNotification\"><param name=\"android-package\" value=\"com.yyuap.upush.plugin.pushnotification.PushNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<receiver android:name=\"com.example.myuapp.MyPushMessageReceiver\"><intent-filter><action android:name=\"com.example.myuapp.action.notification.CLICK\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:label=\"@string/app_name\" android:name=\"com.yonyou.pushclient.ShowNotification\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.android.email.ACCOUNT_INTENT\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.yonyou.pushclient.NotificationPushService\"><intent-filter><action android:name=\"com.test.myapp.NOTIFICATION_PUSH_SERVICE\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.example.myuapp.PushServiceListenService\"><intent-filter><action android:name=\"com.test.myapp.PUSH_LISTENSERVICE\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"APP_ID\" android:value=\"273\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.yyuap.upush.plugin.pushnotification": {
+            "PACKAGE_NAME": "com.test.myapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.test.myapp"
+        }
+    },
+    "dependent_plugins": {}
+}

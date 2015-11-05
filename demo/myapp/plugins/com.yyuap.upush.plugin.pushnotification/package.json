@@ -1,0 +1,12 @@
+{
+    "version": "1.0.0",
+    "name": "com.yyuap.upush.plugin.pushnotification",
+    "cordova_name": "PushNotification",
+    "description": "pushNotification plugin description",
+    "license": "Apache 2.0",
+    "keywords": [
+        "upush",
+        " pushnotification"
+    ],
+    "engines": []
+}
