@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+           android:orientation="vertical" android:layout_width="fill_parent"
+            android:gravity="center" android:layout_height="fill_parent"
+           android:layout_gravity="center" android:background="#ff666666" >
+    
+         <LinearLayout android:orientation="vertical"
+                   android:layout_width="wrap_content" android:gravity="center"
+                   android:layout_height="wrap_content" android:layout_gravity="center"
+                   android:background="@drawable/downbutton_corner">
+                   
+        <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:text="说明"
+        android:textSize="20dip"
+        />
+    <EditText android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:text="     测试用例界面展示功能主要包括：服务启停控制、地址设置、标签管理、位置信息管理、自定义消息展示。 \n
+        1. 启停控制： 测试人员可以通过界面右上角的“开启upush|关闭upush”按钮控制upush服务的开启和关闭。 \n
+        2. 地址设置：测试人员可以在界面上动态的设置服务器地址。步骤：填写目标服务器的Ip、Port值点击“设置”按钮。\n
+        3. 标签管理：用于模拟应用动态的贴标签和撕标签事件。方法：测试人员可以在标签管理的编辑框中输入标签（多标签以逗号','分隔）点击“贴标签”按钮模拟贴标签操作或点击“撕标签”按钮模拟撕标签操作。\n
+        4. 位置信息管理： 测试人员可以通过“开启位置服务|关闭位置服务”按钮设置是否打开位置服务功能，接收基于位置的推送消息。在位置服务开启的情况下点击“当前位置”按钮,将在编辑框中显示当前地理位置。\n
+        5. 自定义消息展示：自定义消息是通过透传将消息传给目标应用，由目标应用负责处理自定义消息。测试用例将在文本框中显示自定义消息内容。\n
+        "
+        android:scrollbars="vertical"
+        android:maxLines="18"/>
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finish"
+        android:text="关闭"
+        android:textColor="#ffffffff"/>
+    
+   </LinearLayout>
+
+</LinearLayout>

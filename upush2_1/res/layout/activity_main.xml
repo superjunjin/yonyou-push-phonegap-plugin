@@ -1,0 +1,271 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffcc66"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="4px"
+        
+
+        >
+        <TableLayout android:id="@+id/tableLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dip"
+            android:stretchColumns="1"
+            android:shrinkColumns="0"
+            
+             >
+            <TableRow >
+                <Button android:id="@+id/bt_on_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="bt_on_off"
+                    android:text="关闭upush" 
+                    android:layout_marginLeft="4dip"
+                    />
+                <Button android:id="@+id/bt_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dip"
+                    android:onClick="bt_explain"
+                    android:text="说明" 
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    />
+            </TableRow>
+        </TableLayout>
+        <View 
+         android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#ff666666"
+        />	
+        <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务器地址:" 
+                    android:padding="2dip"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="7dip"/>  
+           		
+		<TableLayout android:id="@+id/tableLayout02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dip"
+            android:stretchColumns="0,1"
+            >
+		    <TableRow >
+		        <TableLayout android:id="@+id/tableLayout021"
+           			android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:padding="1dip"
+            		android:stretchColumns="1"
+            		android:shrinkColumns="0">
+		            <TableRow >
+                        <TextView android:id="@+id/text_ip"
+                   		 	android:layout_width="wrap_content"
+                    		android:layout_height="wrap_content"
+                    		android:text="IP: "
+                    		android:textSize="18dip"
+                    		
+                    		android:layout_gravity="left"
+                    		android:paddingLeft="6dip"/>
+                    	<EditText android:id="@+id/edit_ip"
+                    		android:layout_width="wrap_content"
+                    		android:layout_height="wrap_content"
+                    		android:background="@drawable/editbg"
+                    		
+                    		android:paddingTop="8px"
+                    		android:layout_gravity="left"
+                    		android:singleLine="true"
+                    		android:minWidth="500px"
+                    		android:text="push.yyuap.com"/> 
+                    </TableRow>
+		        </TableLayout>
+		       <!--  <TextView android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:textSize="1dip"/> -->
+		        <TableLayout android:id="@+id/tableLayout022"
+           			android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:stretchColumns="1"
+            		android:shrinkColumns="0">		            
+                    <TableRow >
+                        <TextView android:id="@+id/text_port"
+                    		android:layout_width="wrap_content"
+                   			android:layout_height="wrap_content"
+                   			android:layout_gravity="left"
+                    		android:text="Port:"
+                    		android:textSize="18dip"
+                    		
+                    		/>
+                		<EditText android:id="@+id/edit_port"
+                    		android:layout_width="wrap_content"
+                    		android:layout_height="wrap_content"
+                    		android:layout_gravity="left"
+                    		android:background="@drawable/editbg"
+                    		
+                    		android:paddingTop="8px"
+                    		android:singleLine="true"
+                    		android:text="5000"
+                    		android:minWidth="80px"/>
+                	</TableRow>
+		        </TableLayout>
+            </TableRow> 
+		</TableLayout>
+		<TableLayout android:id="@+id/tableLayout03"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dip"
+            android:stretchColumns="1"
+            android:shrinkColumns="0">
+		    <TableRow >
+                <Button android:id="@+id/setaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setAddress"
+                    android:text="设置"
+                    android:layout_marginLeft="4dip"/>
+            </TableRow>
+		</TableLayout>
+		<View 
+         android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:padding="4dp"
+        android:background="#ff666666"
+        />
+		<TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标签管理:" 
+                    android:padding="2dip"
+                    android:layout_marginLeft="7dip"
+                    android:layout_gravity="left"/>
+		<TableLayout android:id="@+id/tableLayout04"
+           			android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:padding="1dip"
+            		android:stretchColumns="1"
+            		android:shrinkColumns="0">
+		    <TableRow >
+                <TextView android:id="@+id/text_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"                    
+                    android:text="标签:"
+                    android:textSize="18dip"
+                    
+                    android:paddingLeft="6dip"
+                    />
+                <EditText android:id="@+id/edit_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editbg"
+                    android:padding="8px"
+                    android:minWidth="600px"
+                    android:layout_gravity="left"
+                    android:singleLine="true"/>  
+            </TableRow>		    
+		</TableLayout>
+		<TableLayout android:id="@+id/tableLayout05"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dip"
+            android:stretchColumns="1"
+            android:shrinkColumns="0"           
+             >
+            <TableRow >
+                <Button android:id="@+id/add_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="addTag"
+                    android:text="贴标签"
+                    android:layout_marginLeft="4dip"/>
+                <Button android:id="@+id/delete_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="deleteTag"
+                    android:text=" 撕标签 "
+                    android:layout_marginRight="4dip"
+                    android:layout_gravity="right"/>
+            </TableRow>
+        </TableLayout>
+        <View 
+         android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:padding="4dp"
+        android:background="#ff666666"
+        />
+        <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="位置信息管理:" 
+                    android:padding="2dip"
+                    android:layout_marginLeft="7dip"
+                    android:layout_gravity="left"/>
+        <TableLayout android:id="@+id/tableLayout06"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dip"          
+             >
+            <TableRow >
+                <TextView android:id="@+id/show_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minLines="2"
+                    android:minWidth="650px"
+                    android:background="@drawable/editbg"
+                    android:padding="8px"
+                    android:layout_marginLeft="7dip"
+                    />
+            </TableRow>
+        </TableLayout>
+        <TableLayout android:id="@+id/tableLayout07"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dip"
+            android:stretchColumns="1"
+            android:shrinkColumns="0"           
+             >
+            <TableRow > 
+                <Button android:id="@+id/set_LBS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setLBS"
+                    android:text="打开位置服务"
+                    android:layout_marginLeft="4dip"/>               
+                <Button android:id="@+id/show_LBS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showLBS"
+                    android:text=" 当前位置 "
+                    android:layout_marginRight="4dip"
+                    android:layout_gravity="right"/>
+            </TableRow>
+        </TableLayout>
+        <View 
+         android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:padding="4dp"
+        android:background="#ff666666"
+        />
+        <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自定义消息展示:" 
+                    android:padding="2dip"
+                    android:layout_marginLeft="7dip"
+                    android:layout_gravity="left"/>
+        <TextView android:id="@+id/show_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth='200px'
+                    android:minHeight='100px'/>    
+    </LinearLayout>
+
+
+</RelativeLayout>
